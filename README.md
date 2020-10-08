@@ -8,7 +8,8 @@ Den här wbbtjänsten är skapad med PHP och hanterar information om de kurser j
 Den läser in data från en databas och hämtas ut i JSON-format som hanterar via REST-webbtjänst med full CRUD-funktionalitet. 
 Webbtjänsten är skapad med objektorienterad PHP-programmering med anslutning mot MySQL-databasserver.
 
-### 1. Sätt upp databasen:
+
+### 1.1 Sätt upp databasen:
    CREATE TABLE IF NOT EXISTS `courses` (
    `id` int(11) NOT NULL,
    `code` text NOT NULL,
@@ -18,7 +19,17 @@ Webbtjänsten är skapad med objektorienterad PHP-programmering med anslutning m
    PRIMARY KEY (id)
    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+### 1.2 Skapa databas användernamn:
+   HOST: localhost
+   USER: dbtest
+   PAASWORD: password
+   DATABASE: dbtest
 
 ### 2. Klona projekt:
 
 git clone https://github.com/jbbreil/moment5Steg1.git
+
+### 3. Initialisering konsol kommando:
+
+npm install --save --dev
+
