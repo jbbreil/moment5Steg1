@@ -54,26 +54,26 @@ class Courses {
         return $result; 
     }
 
-
-
-
     // Uppdatera kurs
     function updateCourse($code, $name, $progression, $syllabus, $id){
-        $sql = "UPDATE courses SET code = '$code', name = '$name', 
-        progression = '$progression', syllabus = '$syllabus'
-        WHERE ID = $id";
+        // Kontrollera om värden är korrekta 
+        if(!$this->setCode($code)) { return false; }
+        if(!$this->setName($name)) { return false; }
+        if(!$this->setProgression($progression)) { return false; }
+        if(!$this->setSyllabus($syllabus)) { return false; }
+
+        $sql = "UPDATE courses SET code = '{$code}', name = '{$name}', 
+        progression = '{$progression}', syllabus = '{$syllabus}'
+        WHERE ID = {$id}";
+        
         $result = mysqli_query($this->db, $sql) or die('Fel vid SQL-fråga');
         return $result;
-
     }
-
 
     // Radera kurs
     function deleteCourse($id){
         $sql = "DELETE FROM courses WHERE id = $id";
         return $this->db->query($sql);
-               
-
     }
 
     /* Skydd mot sql-injection 
