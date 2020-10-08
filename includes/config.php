@@ -18,6 +18,7 @@ spl_autoload_register(function ($class) {
 
 require "classes/Courses.class.php";
 
+//DATABAS 
 $devMode = false;
 
 if ($devMode) {
