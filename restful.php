@@ -117,5 +117,5 @@ switch ($_SERVER["REQUEST_METHOD"]){
 
 // returnerar resultatet($result) som JSON
 echo json_encode($result, true);
-
+ 
 ?>
