@@ -47,5 +47,5 @@ Installera xampp-application för att hämta JSON-datakälla ur databasen i loka
 
 ### 4. Initialisering konsol kommando:
 
-1. npm install --save --dev
+npm install --save --dev
 
