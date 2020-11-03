@@ -2,7 +2,7 @@
 
 ### av Gianluca Incandela giin1900@student.miun.se
 
-## Moment 5 - REST api PHP - Steg 1
+## Moment 5 - REST-webbtjänst:
 
 Den här REST-webbtjänsten är skapad med PHP och hanterar information om de kurser jag läst tidigare i programmet.
 Den läser in data från en databas och hämtas ut i JSON-format som komsumerar med full CRUD-funktionalitet via Fetch API anrop. 
